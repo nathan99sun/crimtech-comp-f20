@@ -8,7 +8,7 @@ Version: git version 2.17.2 (Apple Git-113)
 
 E. Install Python
 -----------------
-Version:
+Version: Python 3.7.1
 
 
 F. Install pip
