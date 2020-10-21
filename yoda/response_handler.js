@@ -20,6 +20,52 @@ let std_quotes = ["Patience you must have, my young padawan.",
 ];
 
 function respond() {
-    // Your Code Here
-    console.log("Hello World!");
+    var textbox = document.getElementById("textbox");
+    var image = document.getElementById("image");
+    var value = document.getElementById("myText").value;
+
+    console.log(value);
+    
+    if (value.includes("cute") || value.includes("baby")){
+        if (value.includes("force") && value.includes("dark")){
+            image.setAttribute("src", "img/cute-dark.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = tex;
+        }
+        else if (value.includes("force")){
+            image.setAttribute("src", "img/cute-force.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = tex;
+        }
+        else{
+            image.setAttribute("src", "img/cute-std.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = tex;
+        }
+    }
+    else {
+        if (value.includes("force") && value.includes("dark")){
+            image.setAttribute("src", "img/regular-dark.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = dark_quotes[ Math.floor(Math.random()*5)] + " " + tex;
+        }
+        else if (value.includes("force")){
+            image.setAttribute("src", "img/regular-force.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = force_quotes[ Math.floor(Math.random()*5)]+ " " + tex;
+        }
+        else{
+            image.setAttribute("src", "img/regular-std.jpg");
+            var m = "m";
+            var tex = "H" + m.repeat(Math.random()*20);
+            textbox.innerHTML = std_quotes[ Math.floor(Math.random()*5)]+ " " + tex;
+        }
+    }
+    document.getElementById('myText').value = '';
+
 }
